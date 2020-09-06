@@ -10,6 +10,12 @@ app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-
 app.use(cors());
 
 var list=require("./data")
+
+app.get('/', function (req, res) {
+  
+    //list.arr
+    res.send("list")
+  })
  
 app.get('/getList', function (req, res) {
   
@@ -36,7 +42,7 @@ app.post('/delList',function (req, res) {
     res.send(list)
 })
 
-app.listen(4400)
-console.log("run on 4400")
+app.listen(8080)
+console.log("run on 8080")
 
 module.exports = app;
