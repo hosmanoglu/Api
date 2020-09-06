@@ -1,0 +1,10 @@
+before script:
+  version: 0.2
+phases:
+  install:
+    runtime-versions:
+      node: 12.18.3
+  pre_build:
+    commands:
+      - npm i
+      - npm test
