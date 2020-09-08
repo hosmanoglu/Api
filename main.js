@@ -12,14 +12,12 @@ app.use(cors());
 var list=require("./data")
 
 app.get('/', function (req, res) {
-  
-    //list.arr
+    //its work  
     res.send("list")
-  })
+})
  
 app.get('/getList', function (req, res) {
-  
-  //list.arr
+  //return list
   res.send(list)
 })
 
